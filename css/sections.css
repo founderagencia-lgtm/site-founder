@@ -179,7 +179,7 @@ html:not(.js) .diag { display: none; }
 }
 
 @media (max-width: 860px) {
-  .hero { align-items: flex-end; padding-block: 96px 72px; }
+  .hero { flex-direction: column; align-items: stretch; justify-content: flex-end; gap: 14px; padding-block: 92px 64px; }
   h1 { font-size: min(19.4vw, 15vh); }
   .clients { padding-bottom: 72px; }
   .client-logos { margin-top: 24px; padding-block: 28px; }
@@ -188,7 +188,7 @@ html:not(.js) .diag { display: none; }
   .logo-item b { font-size: 22px; }
   .hero-side p { font-size: 17px; }
   .hud-line, .hud-code { display: none; }
-  .float-stack { top: 84px; right: 16px; left: 16px; width: auto; height: 110px; translate: none; font-size: 8.4px; }
+  .float-stack { position: relative; top: auto; right: auto; flex: none; width: calc(100% - var(--gutter) * 2); max-width: 430px; height: 118px; margin-inline: auto; translate: none; font-size: 8.4px; }
   .fl-browser { left: auto; right: 0; top: 0; }
   .fl-search { left: 0; top: 30px; }
   .fl-chat { display: none; }
