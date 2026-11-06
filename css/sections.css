@@ -113,7 +113,7 @@ h2 { font-size: clamp(46px, 7.6vw, 124px); line-height: 1.03; }
 .steps::after { background: linear-gradient(180deg, var(--teal), var(--lime)); box-shadow: 0 0 14px var(--teal); transform: scaleY(var(--progress)); transform-origin: top; }
 .steps { grid-template-columns: minmax(0, 1fr); }
 .steps h3 { font-size: clamp(30px, 10vw, 46px); line-height: 1.05; }
-.how-head { grid-template-columns: minmax(0, 1fr); min-height: 0; margin-bottom: clamp(96px, 20svh, 200px); }
+.how-head { grid-template-columns: minmax(0, 1fr); min-height: 0; margin-bottom: clamp(140px, 24svh, 240px); }
 .how h2 { font-size: clamp(38px, min(11.4vw, 7.6vw + 16px), 124px); }
 .steps span { font-size: 13px; }
 
@@ -198,7 +198,7 @@ html:not(.js) .diag { display: none; }
   .segmented button { padding-inline: 8px; font-size: 11px; }
   .steps { padding-left: 16px; }
   .steps::before, .steps::after { left: 0; }
-  .how-head { margin-bottom: 72px; }
+  .how-head { margin-bottom: 112px; }
   .diag-grid, .faq { grid-template-columns: minmax(0, 1fr); }
   .diag { padding-block: 40px 120px; }
   .diag-panel { padding: 20px; min-height: 400px; }
