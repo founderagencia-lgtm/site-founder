@@ -58,9 +58,9 @@ h1 { font-size: min(9.6vw, 16.6vh, 190px); line-height: 1.02; max-width: 5.3em; 
 .logo-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
 .logo-set { display: flex; align-items: center; gap: 96px; padding-right: 96px; }
 .logo-item { display: inline-flex; align-items: center; gap: 12px; flex: none; }
-.logo-pic { position: relative; display: block; height: 84px; }
+.logo-pic { position: relative; display: block; height: var(--h, 72px); }
 .logo-mono { display: block; width: auto; height: 100%; max-width: none; transition: opacity .25s; }
-.logo-color { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: contain; opacity: 0; transition: opacity .25s; }
+.logo-color { position: absolute; left: 50%; top: 50%; width: auto; height: 100%; max-width: none; translate: -50% -50%; opacity: 0; transition: opacity .25s; }
 .logo-item:hover .logo-mono { opacity: 0; }
 .logo-item:hover .logo-color { opacity: 1; }
 .logo-item b { font: 600 30px/1 var(--sans); color: var(--navy); transition: color .25s; }
@@ -180,7 +180,7 @@ html:not(.js) .diag { display: none; }
   .clients { padding-bottom: 72px; }
   .client-logos { margin-top: 24px; padding-block: 28px; }
   .logo-set { gap: 56px; padding-right: 56px; }
-  .logo-pic { height: 56px; }
+  .logo-pic { height: calc(var(--h, 72px) * .68); }
   .logo-item b { font-size: 22px; }
   .hero-side p { font-size: 17px; }
   .hud-line, .hud-code { display: none; }
