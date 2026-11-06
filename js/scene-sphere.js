@@ -99,7 +99,8 @@ export function initSphereScene(canvas, caps) {
     camera.position.z = aspect < 1 ? 14 : 12;
     camera.updateProjectionMatrix();
     const halfWidth = Math.tan(THREE.MathUtils.degToRad(18)) * camera.position.z * aspect;
-    group.position.x = aspect > 1.15 ? -(halfWidth - 4.3) : 0;
+    const lineX = document.querySelector('.steps').getBoundingClientRect().left - 28;
+    group.position.x = aspect > 1.15 ? (lineX / 2 / width - .5) * 2 * halfWidth : 0;
     draw();
   };
   const observer = new ResizeObserver(resize);

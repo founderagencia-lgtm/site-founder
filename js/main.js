@@ -39,7 +39,7 @@ async function loadScenes(caps) {
   await paint();
   const scenes = [
     ['./scene-trace.js', 'initTraceScene', '#trace-canvas'],
-    ['./scene-sphere.js', 'initSphereScene', '#sphere-canvas'],
+    ['./scene-sphere.js?v=20261106c', 'initSphereScene', '#sphere-canvas'],
   ];
   for (const [path, init, selector] of scenes) {
     try {
