@@ -14,7 +14,7 @@ h1, h2, .service-nav a, .steps h3, .footer-title, .intro-words, .diag-question, 
 main { overflow-x: clip; }
 
 /* Topo */
-.hero { align-items: center; padding-block: 112px 88px; overflow: clip; }
+.hero { align-items: center; padding-block: 112px 88px; overflow: clip; -webkit-touch-callout: none; }
 .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; position: relative; z-index: 2; }
 h1 { font-size: min(9.6vw, 16.6vh, 190px); line-height: 1.02; max-width: 5.3em; letter-spacing: .002em; }
 .hero-underline { display: block; width: min(52%, 520px); height: 6px; margin-top: 18px; background: linear-gradient(90deg, var(--lime) 50%, var(--teal) 50%); transform-origin: left; }
@@ -191,12 +191,13 @@ html:not(.js) .diag { display: none; }
   .fl-search { left: 0; top: 30px; }
   .fl-chat { display: none; }
   .intro-block { grid-template-columns: minmax(0, 1fr); padding-block: 88px 56px; }
+  .services { grid-template-columns: minmax(0, 1fr); }
   h2 { font-size: clamp(44px, 13.4vw, 92px); }
   .compare { padding-block: 24px 80px; }
   .compare-text { min-height: 7em; }
   .segmented { display: grid; grid-template-columns: 1fr 1fr; justify-self: stretch; }
   .segmented button { padding-inline: 8px; font-size: 11px; }
-  .steps { padding-left: 16px; }
+  .steps { width: 100%; padding-left: 16px; }
   .steps::before, .steps::after { left: 0; }
   .how-head { margin-bottom: 112px; }
   .diag-grid, .faq { grid-template-columns: minmax(0, 1fr); }
