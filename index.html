@@ -14,7 +14,9 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/sections.css">
   <script>
     document.documentElement.classList.add('js');
     try { if (sessionStorage.getItem('founder-intro')) document.documentElement.classList.add('seen-intro'); } catch (e) {}
@@ -35,6 +37,7 @@
   </div>
 
   <canvas id="trace-canvas" aria-hidden="true"></canvas>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
 
   <header class="site-header">
     <a class="brand" href="#topo" aria-label="Founder, início">
@@ -44,7 +47,7 @@
     <nav id="menu" class="site-nav" aria-label="Principal">
       <a href="#servicos">Serviços</a>
       <a href="#como-trabalhamos">Como trabalhamos</a>
-      <a href="#orcamento">Orçamento</a>
+      <a href="#diagnostico">Diagnóstico</a>
       <a class="btn btn-lime nav-cta" href="#orcamento">Pedir orçamento</a>
     </nav>
     <a class="btn btn-lime header-cta" href="#orcamento">Pedir orçamento</a>
@@ -52,18 +55,50 @@
 
   <main id="conteudo">
     <section id="topo" class="hero">
+      <div class="hud-line" aria-hidden="true"></div>
+      <pre class="hud-code" aria-hidden="true">&lt;section class="presenca"&gt;
+  &lt;h2&gt;Visibilidade&lt;/h2&gt;
+  &lt;p&gt;Autoridade&lt;/p&gt;
+  &lt;p&gt;Resultados&lt;/p&gt;
+&lt;/section&gt;</pre>
+      <div class="float-stack" aria-hidden="true">
+        <div class="float-card fl-browser" data-depth="34">
+          <div class="float-inner">
+            <div class="fl-bar"><i></i><i></i><i></i><span>suaempresa.com.br</span></div>
+            <div class="fl-page"><b></b><b></b><em></em><div class="fl-tiles"><i></i><i></i><i></i></div></div>
+          </div>
+        </div>
+        <div class="float-card fl-search" data-depth="62">
+          <div class="float-inner">
+            <div class="fl-query">empresa perto de mim</div>
+            <div class="fl-hit">Sua empresa</div>
+          </div>
+        </div>
+        <div class="float-card fl-chat" data-depth="90">
+          <div class="float-inner"><small>Nova mensagem</small><span>Olá! Quero um orçamento.</span></div>
+        </div>
+      </div>
       <div class="wrap hero-grid">
+        <p class="hero-eyebrow">Agência de marketing</p>
         <h1 data-words>Estratégia que gera <em>resultados</em></h1>
+        <span class="hero-underline" aria-hidden="true"></span>
         <div class="hero-side">
           <p>Presença digital, posicionamento e comunicação orientados a objetivos.</p>
           <div class="btn-row">
             <a class="btn btn-lime" href="#orcamento">Pedir orçamento</a>
-            <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+            <a class="btn btn-ghost" href="#diagnostico">Fazer diagnóstico</a>
           </div>
         </div>
       </div>
       <p class="hold-hint" aria-hidden="true"><span class="hint-desktop">Clique e segure</span><span class="hint-touch">Toque e segure</span></p>
     </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Sites ✦ Google ✦ Tráfego pago ✦ Redes sociais ✦ Visibilidade ✦ Autoridade ✦ Resultados ✦</span>
+        <span>Sites ✦ Google ✦ Tráfego pago ✦ Redes sociais ✦ Visibilidade ✦ Autoridade ✦ Resultados ✦</span>
+      </div>
+    </div>
 
     <div class="sheet">
       <section class="wrap intro-block" aria-labelledby="intro-title">
@@ -94,6 +129,7 @@
             <p class="tag">Criação de sites</p>
             <h3>Um site à altura do seu negócio.</h3>
             <p>Sites e landing pages rápidos, feitos para o celular e pensados para transformar visita em contato.</p>
+            <ul class="chips" aria-label="O que entregamos"><li>Site institucional</li><li>Landing page</li><li>Versão para celular</li><li>Botão de WhatsApp</li></ul>
           </article>
 
           <article id="card-google" class="service-card" data-service="google" tabindex="-1">
@@ -110,6 +146,7 @@
             <p class="tag">Google</p>
             <h3>Apareça quando procurarem por você.</h3>
             <p>Perfil da Empresa no Google e SEO para sua empresa ser encontrada por quem já busca o que você oferece.</p>
+            <ul class="chips" aria-label="O que entregamos"><li>Perfil da Empresa</li><li>SEO</li><li>Google Maps</li><li>Palavras-chave</li></ul>
           </article>
 
           <article id="card-trafego" class="service-card" data-service="trafego" tabindex="-1">
@@ -124,6 +161,7 @@
             <p class="tag">Tráfego pago</p>
             <h3>Anúncios para quem importa.</h3>
             <p>Campanhas no Google e no Meta, direcionadas para levar as pessoas certas até o seu contato.</p>
+            <ul class="chips" aria-label="O que entregamos"><li>Google Ads</li><li>Meta Ads</li><li>Público definido</li><li>Acompanhamento</li></ul>
           </article>
 
           <article id="card-redes" class="service-card" data-service="redes" tabindex="-1">
@@ -140,6 +178,33 @@
             <p class="tag">Redes sociais</p>
             <h3>Constância que constrói marca.</h3>
             <p>Gestão, posts e vídeos para o Instagram e outras redes, com planejamento e a cara da sua empresa.</p>
+            <ul class="chips" aria-label="O que entregamos"><li>Calendário de posts</li><li>Artes</li><li>Vídeos curtos</li><li>Gestão de perfis</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="wrap compare" data-showing="com" aria-labelledby="compare-title">
+        <h2 id="compare-title" data-words>O que muda na <em>prática</em></h2>
+        <div class="segmented" role="group" aria-label="Escolha o cenário">
+          <button type="button" data-view="sem" aria-pressed="false">Sem presença digital</button>
+          <button type="button" data-view="com" aria-pressed="true">Com a Founder</button>
+        </div>
+        <div class="compare-rows">
+          <article class="compare-row">
+            <h3 class="compare-label">Busca</h3>
+            <p class="compare-text"><span class="c-sem">Quem procura no Google não encontra sua empresa.</span><span class="c-com">Sua empresa aparece para quem procura o que você oferece.</span></p>
+          </article>
+          <article class="compare-row">
+            <h3 class="compare-label">Site</h3>
+            <p class="compare-text"><span class="c-sem">Sem site, tudo depende de indicação e de perfis de terceiros.</span><span class="c-com">Um endereço próprio, com tudo o que o cliente precisa saber.</span></p>
+          </article>
+          <article class="compare-row">
+            <h3 class="compare-label">Anúncios</h3>
+            <p class="compare-text"><span class="c-sem">Anúncios sem direção e sem acompanhamento.</span><span class="c-com">Campanhas com objetivo e público definidos, acompanhadas de perto.</span></p>
+          </article>
+          <article class="compare-row">
+            <h3 class="compare-label">Redes</h3>
+            <p class="compare-text"><span class="c-sem">Perfis parados e sem padrão visual.</span><span class="c-com">Presença constante, com planejamento e a cara da sua empresa.</span></p>
           </article>
         </div>
       </section>
@@ -161,7 +226,72 @@
       </div>
     </section>
 
+    <section id="diagnostico" class="diag" aria-labelledby="diag-title">
+      <div class="wrap diag-grid">
+        <div class="diag-copy">
+          <p class="tag tag-dark">Diagnóstico rápido</p>
+          <h2 id="diag-title" data-words>Sua empresa está <em>visível?</em></h2>
+          <p>Responda cinco perguntas e veja por onde começar. Nada é salvo: o resultado só sai daqui se você enviar pelo WhatsApp.</p>
+        </div>
+        <div class="diag-panel">
+          <div class="diag-quiz">
+            <div>
+              <p class="diag-count" aria-live="polite"></p>
+              <div class="diag-bar" aria-hidden="true"><i></i></div>
+            </div>
+            <p class="diag-question" tabindex="-1" aria-live="polite"></p>
+            <div class="diag-options">
+              <button class="btn btn-lime" type="button" data-answer="sim">Sim</button>
+              <button class="btn btn-outline" type="button" data-answer="nao">Não</button>
+            </div>
+          </div>
+          <div class="diag-result" hidden>
+            <div class="diag-summary">
+              <div class="gauge" aria-hidden="true">
+                <svg viewBox="0 0 120 120">
+                  <defs><linearGradient id="gauge-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DB6B0"/><stop offset="1" stop-color="#D6E54D"/></linearGradient></defs>
+                  <circle class="gauge-track" cx="60" cy="60" r="54"/>
+                  <circle class="gauge-value" cx="60" cy="60" r="54"/>
+                </svg>
+                <span class="gauge-number"></span>
+              </div>
+              <p class="diag-result-title" tabindex="-1"></p>
+            </div>
+            <div>
+              <p class="diag-gaps-label">Por onde começar</p>
+              <ul class="diag-gaps"></ul>
+            </div>
+            <div class="diag-actions">
+              <a class="btn btn-lime diag-send" href="#orcamento" rel="noopener">Enviar pelo WhatsApp</a>
+              <button class="diag-restart" type="button">Refazer o diagnóstico</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="sheet sheet-form">
+      <section class="wrap faq" aria-labelledby="faq-title">
+        <h2 id="faq-title" data-words>Perguntas <em>frequentes</em></h2>
+        <div class="faq-list">
+          <details>
+            <summary>Quanto custa?</summary>
+            <p>Depende do que sua empresa precisa. Você conta seu objetivo e enviamos um orçamento para o seu caso.</p>
+          </details>
+          <details>
+            <summary>Preciso contratar todos os serviços?</summary>
+            <p>Não. Você pode começar pelo que faz mais sentido agora e acrescentar o resto depois.</p>
+          </details>
+          <details>
+            <summary>Já tenho site e redes sociais. Vocês podem ajudar?</summary>
+            <p>Sim. Analisamos o que já existe e mostramos o que vale manter, ajustar ou refazer.</p>
+          </details>
+          <details>
+            <summary>Como começo?</summary>
+            <p>Faça o diagnóstico ou preencha o formulário abaixo. A conversa continua pelo WhatsApp.</p>
+          </details>
+        </div>
+      </section>
       <section id="orcamento" class="wrap quote" aria-labelledby="quote-title">
         <div class="quote-copy">
           <p class="tag">Orçamento</p>
@@ -206,10 +336,11 @@
       <nav aria-label="Rodapé">
         <a href="#servicos">Serviços</a>
         <a href="#como-trabalhamos">Como trabalhamos</a>
+        <a href="#diagnostico">Diagnóstico</a>
         <a href="#orcamento">Orçamento</a>
       </nav>
       <div class="footer-cta">
-        <p class="footer-title">Vamos colocar sua empresa no mapa?</p>
+        <p class="footer-title">Vamos colocar sua empresa no <em>mapa?</em></p>
         <a class="btn btn-lime" href="#orcamento">Pedir orçamento</a>
       </div>
       <div class="footer-base">
