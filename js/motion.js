@@ -99,14 +99,14 @@ export function initPanels(caps) {
   document.querySelectorAll('[data-words]').forEach((heading) => {
     const words = splitWords(heading);
     if (heading.tagName === 'H1') {
-      gsap.set(words, { yPercent: 150 });
+      gsap.set(words, { yPercent: 220 });
       gsap.set('.hero-side > *, .hero-eyebrow', { y: 20, opacity: 0 });
       gsap.set('.hero-underline', { scaleX: 0 });
       gsap.set('.float-inner', { opacity: 0, scale: .86 });
       return;
     }
     gsap.from(words, {
-      yPercent: 150, duration: .9, stagger: .035, ease: 'power4.out',
+      yPercent: 220, duration: .9, stagger: .035, ease: 'power4.out',
       scrollTrigger: { trigger: heading, start: 'top 82%', once: true },
     });
   });
