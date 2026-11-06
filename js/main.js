@@ -38,8 +38,8 @@ async function loadScenes(caps) {
   const paint = () => new Promise((resolve) => requestAnimationFrame(() => setTimeout(resolve)));
   await paint();
   const scenes = [
-    ['./scene-trace.js', 'initTraceScene', '#trace-canvas'],
-    ['./scene-sphere.js?v=20261106c', 'initSphereScene', '#sphere-canvas'],
+    ['./scene-trace.js?v=20261106f', 'initTraceScene', '#trace-canvas'],
+    ['./scene-sphere.js?v=20261106f', 'initSphereScene', '#sphere-canvas'],
   ];
   for (const [path, init, selector] of scenes) {
     try {

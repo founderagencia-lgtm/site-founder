@@ -100,9 +100,17 @@ export function initTraceScene(canvas, caps) {
   }));
   scene.add(dots);
 
+  let lastWidth = 0;
+  let lastHeight = 0;
+  const touch = matchMedia('(hover: none)').matches;
   const resize = () => {
     const width = canvas.clientWidth || innerWidth;
     const height = canvas.clientHeight || innerHeight;
+    // No celular a barra do navegador muda a altura durante a rolagem: redimensionar apagaria o desenho
+    const sameWidth = width === lastWidth;
+    if (sameWidth && (height === lastHeight || (touch && Math.abs(height - lastHeight) < 180))) return false;
+    lastWidth = width;
+    lastHeight = height;
     const aspect = width / height;
     renderer.setSize(width, height, false);
     camera.aspect = aspect;
@@ -110,10 +118,10 @@ export function initTraceScene(canvas, caps) {
     camera.updateProjectionMatrix();
     group.rotation.z = aspect < 1 ? .95 : .3;
     group.position.set(aspect < 1 ? 1.4 : 3.4, aspect < 1 ? 3.2 : 1.5, 0);
+    return true;
   };
   const observer = new ResizeObserver(() => {
-    resize();
-    if (caps.reducedMotion) renderer.render(scene, camera);
+    if (resize()) renderer.render(scene, camera);
   });
   observer.observe(canvas);
   resize();

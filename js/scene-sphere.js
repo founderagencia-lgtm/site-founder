@@ -89,10 +89,16 @@ export function initSphereScene(canvas, caps) {
   scene.add(group);
 
   const draw = () => renderer.render(scene, camera);
+  let lastWidth = 0;
+  let lastHeight = 0;
+  const touch = matchMedia('(hover: none)').matches;
   const resize = () => {
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
     if (!width || !height) return;
+    if (width === lastWidth && (height === lastHeight || (touch && Math.abs(height - lastHeight) < 180))) return;
+    lastWidth = width;
+    lastHeight = height;
     const aspect = width / height;
     renderer.setSize(width, height, false);
     camera.aspect = aspect;
