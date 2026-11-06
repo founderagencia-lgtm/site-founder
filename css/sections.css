@@ -13,6 +13,8 @@ h1, h2, .service-nav a, .steps h3, .footer-title, .intro-words, .diag-question, 
 
 main { overflow-x: clip; }
 
+#trace-canvas { bottom: auto; height: 100vh; height: 100lvh; }
+
 /* Topo */
 .hero { align-items: center; padding-block: 112px 88px; overflow: clip; -webkit-touch-callout: none; }
 .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; position: relative; z-index: 2; }
