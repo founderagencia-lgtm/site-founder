@@ -2,6 +2,8 @@ import { WHATSAPP_NUMBER } from './config.js';
 import { initForm } from './form.js';
 import { initAnchors, initIntro, initPanels, initServiceNav, initMenu, revealHero } from './motion.js';
 import { initCards } from './cards.js';
+import { initDiagnosis } from './diagnosis.js';
+import { initCompare, initHeroStack, initProgress } from './sections.js';
 
 function hasWebgl() {
   try {
@@ -58,6 +60,10 @@ async function start() {
   attempt('painéis', () => initPanels(caps));
   attempt('serviços', () => initServiceNav(caps));
   attempt('cards', () => initCards(caps));
+  attempt('diagnóstico', () => initDiagnosis(document.getElementById('diagnostico'), WHATSAPP_NUMBER));
+  attempt('comparação', () => initCompare(caps));
+  attempt('profundidade', () => initHeroStack(caps));
+  attempt('progresso', () => initProgress(caps));
   loadScenes(caps);
   let revealed = false;
   const reveal = () => {

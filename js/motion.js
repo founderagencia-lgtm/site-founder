@@ -86,7 +86,9 @@ export function revealHero(caps) {
   const title = document.querySelector('h1');
   if (!lib || caps.reducedMotion) return;
   lib.gsap.to(title.querySelectorAll('.wi'), { yPercent: 0, duration: 1, delay: .12, stagger: .06, ease: 'power4.out' });
-  lib.gsap.to('.hero-side > *', { y: 0, opacity: 1, duration: .8, delay: .4, stagger: .1, ease: 'power3.out' });
+  lib.gsap.to('.hero-side > *, .hero-eyebrow', { y: 0, opacity: 1, duration: .8, delay: .4, stagger: .1, ease: 'power3.out' });
+  lib.gsap.to('.hero-underline', { scaleX: 1, duration: .9, delay: .7, ease: 'power3.inOut' });
+  lib.gsap.to('.float-inner', { opacity: 1, scale: 1, duration: 1, delay: .5, stagger: .18, ease: 'power3.out' });
 }
 
 export function initPanels(caps) {
@@ -98,7 +100,9 @@ export function initPanels(caps) {
     const words = splitWords(heading);
     if (heading.tagName === 'H1') {
       gsap.set(words, { yPercent: 110 });
-      gsap.set('.hero-side > *', { y: 20, opacity: 0 });
+      gsap.set('.hero-side > *, .hero-eyebrow', { y: 20, opacity: 0 });
+      gsap.set('.hero-underline', { scaleX: 0 });
+      gsap.set('.float-inner', { opacity: 0, scale: .86 });
       return;
     }
     gsap.from(words, {
@@ -111,11 +115,11 @@ export function initPanels(caps) {
     y: -72, opacity: .15, ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom 35%', scrub: true },
   });
-  gsap.from('.sheet', {
+  gsap.from('.sheet:not(.sheet-form)', {
     scale: .965, transformOrigin: '50% 0', ease: 'none',
     scrollTrigger: { trigger: '.sheet', start: 'top bottom', end: 'top 45%', scrub: true },
   });
-  gsap.utils.toArray('.steps li, .quote-form, .footer-cta').forEach((element) => {
+  gsap.utils.toArray('.steps li, .quote-form, .footer-cta, .compare-row, .diag-panel, .faq-list').forEach((element) => {
     gsap.from(element, {
       y: 48, opacity: 0, duration: .9, ease: 'power3.out',
       scrollTrigger: { trigger: element, start: 'top 86%', once: true },
