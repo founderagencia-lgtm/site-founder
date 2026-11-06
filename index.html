@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Founder | Agência de marketing e presença digital</title>
+  <meta name="description" content="A Founder cria sites, coloca sua empresa no Google, faz tráfego pago e cuida das suas redes sociais. Peça um orçamento pelo WhatsApp.">
+  <meta name="theme-color" content="#0B0F23">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Founder | Estratégia que gera resultados">
+  <meta property="og:description" content="Sites, Google, tráfego pago e redes sociais para sua empresa ser encontrada.">
+  <meta property="og:image" content="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (sessionStorage.getItem('founder-intro')) document.documentElement.classList.add('seen-intro'); } catch (e) {}
+  </script>
+  <script defer src="vendor/gsap.min.js"></script>
+  <script defer src="vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div id="intro" aria-hidden="true">
+    <div class="intro-words">
+      <span>Visibilidade</span>
+      <span>Autoridade</span>
+      <span>Resultados</span>
+    </div>
+  </div>
+
+  <canvas id="trace-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="#topo" aria-label="Founder, início">
+      <img src="img/logo-founder.svg" alt="Founder" width="150" height="38">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" class="site-nav" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-trabalhamos">Como trabalhamos</a>
+      <a href="#orcamento">Orçamento</a>
+      <a class="btn btn-lime nav-cta" href="#orcamento">Pedir orçamento</a>
+    </nav>
+    <a class="btn btn-lime header-cta" href="#orcamento">Pedir orçamento</a>
+  </header>
+
+  <main id="conteudo">
+    <section id="topo" class="hero">
+      <div class="wrap hero-grid">
+        <h1 data-words>Estratégia que gera <em>resultados</em></h1>
+        <div class="hero-side">
+          <p>Presença digital, posicionamento e comunicação orientados a objetivos.</p>
+          <div class="btn-row">
+            <a class="btn btn-lime" href="#orcamento">Pedir orçamento</a>
+            <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+          </div>
+        </div>
+      </div>
+      <p class="hold-hint" aria-hidden="true"><span class="hint-desktop">Clique e segure</span><span class="hint-touch">Toque e segure</span></p>
+    </section>
+
+    <div class="sheet">
+      <section class="wrap intro-block" aria-labelledby="intro-title">
+        <p class="lead">Presença digital, do primeiro clique à conversa.</p>
+        <h2 id="intro-title" data-words>Tudo o que sua empresa precisa para ser <em>encontrada</em></h2>
+      </section>
+
+      <section id="servicos" class="wrap services" aria-label="Serviços">
+        <nav class="service-nav" aria-label="Serviços">
+          <a href="#card-sites" data-service="sites">Criação de sites</a>
+          <a href="#card-google" data-service="google">Google</a>
+          <a href="#card-trafego" data-service="trafego">Tráfego pago</a>
+          <a href="#card-redes" data-service="redes">Redes sociais</a>
+        </nav>
+
+        <div class="service-list">
+          <article id="card-sites" class="service-card" data-service="sites" tabindex="-1">
+            <div class="stage" aria-hidden="true">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>suaempresa.com.br</span></div>
+                <div class="browser-page">
+                  <div class="pg pg-nav"><b></b><u></u><u></u><u></u></div>
+                  <div class="pg pg-hero"><s></s><s></s><em></em></div>
+                  <div class="pg pg-tiles"><b></b><b></b><b></b></div>
+                </div>
+              </div>
+            </div>
+            <p class="tag">Criação de sites</p>
+            <h3>Um site à altura do seu negócio.</h3>
+            <p>Sites e landing pages rápidos, feitos para o celular e pensados para transformar visita em contato.</p>
+          </article>
+
+          <article id="card-google" class="service-card" data-service="google" tabindex="-1">
+            <div class="stage" aria-hidden="true">
+              <div class="search">
+                <div class="search-box"><span class="search-text" data-text="empresa perto de mim">empresa perto de mim</span></div>
+                <ol class="results">
+                  <li class="result result-you"><strong>Sua empresa</strong><span></span></li>
+                  <li class="result"><strong></strong><span></span></li>
+                  <li class="result"><strong></strong><span></span></li>
+                </ol>
+              </div>
+            </div>
+            <p class="tag">Google</p>
+            <h3>Apareça quando procurarem por você.</h3>
+            <p>Perfil da Empresa no Google e SEO para sua empresa ser encontrada por quem já busca o que você oferece.</p>
+          </article>
+
+          <article id="card-trafego" class="service-card" data-service="trafego" tabindex="-1">
+            <div class="stage" aria-hidden="true">
+              <div class="flow">
+                <div class="flow-track"><i class="flow-fill"></i><i class="flow-dot"></i></div>
+                <div class="flow-node">Anúncio</div>
+                <div class="flow-node">Clique</div>
+                <div class="flow-node">Mensagem</div>
+              </div>
+            </div>
+            <p class="tag">Tráfego pago</p>
+            <h3>Anúncios para quem importa.</h3>
+            <p>Campanhas no Google e no Meta, direcionadas para levar as pessoas certas até o seu contato.</p>
+          </article>
+
+          <article id="card-redes" class="service-card" data-service="redes" tabindex="-1">
+            <div class="stage" aria-hidden="true">
+              <div class="calendar">
+                <div class="cal-head"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div>
+                <div class="cal-grid">
+                  <i class="post a"></i><i></i><i class="post b"></i><i></i><i class="post c"></i><i></i><i class="post a"></i>
+                  <i></i><i class="post c"></i><i></i><i class="post a"></i><i></i><i class="post b"></i><i></i>
+                  <i class="post b"></i><i></i><i class="post a"></i><i></i><i class="post c"></i><i></i><i class="post b"></i>
+                </div>
+              </div>
+            </div>
+            <p class="tag">Redes sociais</p>
+            <h3>Constância que constrói marca.</h3>
+            <p>Gestão, posts e vídeos para o Instagram e outras redes, com planejamento e a cara da sua empresa.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section id="como-trabalhamos" class="how" aria-labelledby="how-title">
+      <div class="how-stage" aria-hidden="true"><canvas id="sphere-canvas"></canvas></div>
+      <div class="wrap how-content">
+        <header class="how-head">
+          <p class="tag tag-dark">Como trabalhamos</p>
+          <h2 id="how-title" data-words>Um método simples, do <em>diagnóstico</em> ao acompanhamento</h2>
+        </header>
+        <ol class="steps">
+          <li><span>01</span><h3>Diagnóstico</h3><p>Entendemos sua empresa, seus clientes e onde você está hoje na internet.</p></li>
+          <li><span>02</span><h3>Estratégia</h3><p>Definimos o que fazer primeiro, em quais canais e com qual objetivo.</p></li>
+          <li><span>03</span><h3>Execução</h3><p>Colocamos no ar: site, campanhas, perfil no Google e conteúdo.</p></li>
+          <li><span>04</span><h3>Acompanhamento</h3><p>Analisamos o que está funcionando e ajustamos o caminho junto com você.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="sheet sheet-form">
+      <section id="orcamento" class="wrap quote" aria-labelledby="quote-title">
+        <div class="quote-copy">
+          <p class="tag">Orçamento</p>
+          <h2 id="quote-title" data-words>Conte sobre sua <em>empresa</em></h2>
+          <p>Preencha os campos e sua mensagem abre pronta no WhatsApp. É só enviar.</p>
+        </div>
+        <form id="quote-form" class="quote-form" novalidate onsubmit="return false">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required aria-describedby="nome-erro">
+            <p id="nome-erro" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="empresa">Empresa</label>
+            <input id="empresa" name="empresa" type="text" autocomplete="organization" required aria-describedby="empresa-erro">
+            <p id="empresa-erro" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="servico">Serviço</label>
+            <select id="servico" name="servico">
+              <option>Ainda não sei</option>
+              <option>Criação de sites</option>
+              <option>Google</option>
+              <option>Tráfego pago</option>
+              <option>Redes sociais</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem <small>(opcional)</small></label>
+            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+          </div>
+          <button class="btn btn-navy" type="submit">Enviar pelo WhatsApp</button>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+        <p class="form-noscript">Ative o JavaScript do navegador para enviar seu pedido de orçamento.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer id="rodape" class="footer">
+    <div class="wrap footer-grid">
+      <nav aria-label="Rodapé">
+        <a href="#servicos">Serviços</a>
+        <a href="#como-trabalhamos">Como trabalhamos</a>
+        <a href="#orcamento">Orçamento</a>
+      </nav>
+      <div class="footer-cta">
+        <p class="footer-title">Vamos colocar sua empresa no mapa?</p>
+        <a class="btn btn-lime" href="#orcamento">Pedir orçamento</a>
+      </div>
+      <div class="footer-base">
+        <img src="img/logo-founder.svg" alt="Founder" width="150" height="38" loading="lazy">
+        <small>© <span id="year">2026</span> Founder Agência de Marketing</small>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
