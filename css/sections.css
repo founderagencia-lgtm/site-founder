@@ -51,18 +51,19 @@ h1 { font-size: min(9.6vw, 16.6vh, 190px); line-height: 1.02; max-width: 5.3em; 
 .fl-chat span { font-weight: 500; }
 
 /* Clientes */
-.clients { position: relative; z-index: 1; margin-top: calc(var(--radius-sheet) * -1); padding-block: calc(var(--radius-sheet) + 104px) 72px; background: var(--navy); color: var(--ice); }
+.clients { position: relative; z-index: 1; margin-top: calc(var(--radius-sheet) * -1); padding-block: calc(var(--radius-sheet) + 72px) 56px; background: var(--navy); color: var(--ice); }
+.clients h2 { font-size: clamp(22px, 2.5vw, 34px); line-height: 1.15; letter-spacing: .03em; text-align: center; }
 .clients h2 em { color: var(--lime); }
 .clients + .how { margin-top: 0; }
 .clients + .how .how-content { padding-top: 96px; }
 .clients + .how .how-head { min-height: 0; margin-bottom: 18svh; }
-.client-logos { position: relative; width: min(100% - var(--gutter) * 2, 1280px); margin: 44px auto 0; padding-block: 28px; overflow: hidden; border-block: 1px solid rgba(244, 247, 242, .16); -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+.client-logos { position: relative; width: min(100% - var(--gutter) * 2, 1280px); margin: 32px auto 0; padding-block: 44px; overflow: hidden; border-block: 1px solid rgba(244, 247, 242, .16); -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
 .logo-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
 .client-logos:hover .logo-track { animation-play-state: paused; }
-.logo-set { display: flex; align-items: center; gap: 68px; padding-right: 68px; }
+.logo-set { display: flex; align-items: center; gap: 96px; padding-right: 96px; }
 .logo-item { display: inline-flex; align-items: center; gap: 12px; flex: none; opacity: .86; }
-.logo-item img { width: auto; height: 42px; max-width: none; }
-.logo-item b { font: 600 20px/1 var(--sans); color: var(--white); }
+.logo-item img { width: auto; height: 84px; max-width: none; }
+.logo-item b { font: 600 30px/1 var(--sans); color: var(--white); }
 
 /* Faixa */
 .marquee { position: relative; z-index: 3; margin-bottom: -28px; padding-block: 12px; overflow: hidden; background: var(--lime); color: var(--navy); rotate: -1.3deg; scale: 1.03; }
@@ -175,10 +176,10 @@ html:not(.js) .diag { display: none; }
   .hero { align-items: flex-end; padding-block: 96px 72px; }
   h1 { font-size: min(19.4vw, 15vh); }
   .clients { padding-block: calc(var(--radius-sheet) + 64px) 48px; }
-  .client-logos { margin-top: 28px; padding-block: 18px; }
-  .logo-set { gap: 40px; padding-right: 40px; }
-  .logo-item img { height: 30px; }
-  .logo-item b { font-size: 15px; }
+  .client-logos { margin-top: 24px; padding-block: 28px; }
+  .logo-set { gap: 56px; padding-right: 56px; }
+  .logo-item img { height: 56px; }
+  .logo-item b { font-size: 22px; }
   .hero-side p { font-size: 17px; }
   .hud-line, .hud-code { display: none; }
   .float-stack { top: 84px; right: 16px; left: 16px; width: auto; height: 110px; translate: none; font-size: 8.4px; }
