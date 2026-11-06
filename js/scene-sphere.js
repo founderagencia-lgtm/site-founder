@@ -6,7 +6,7 @@ const POINT_VERTEX = /* glsl */`
   varying float vMix;
   void main() {
     vec4 view = modelViewMatrix * vec4(position, 1.);
-    vDepth = smoothstep(-11., -6.2, view.z);
+    vDepth = smoothstep(-13., -7.3, view.z);
     vMix = position.y * .17 + .5;
     gl_Position = projectionMatrix * view;
     gl_PointSize = (1.4 + 2.6 * vDepth) * uPixel;
@@ -96,9 +96,10 @@ export function initSphereScene(canvas, caps) {
     const aspect = width / height;
     renderer.setSize(width, height, false);
     camera.aspect = aspect;
-    camera.position.z = aspect < 1 ? 14 : 11;
+    camera.position.z = aspect < 1 ? 14 : 12;
     camera.updateProjectionMatrix();
-    group.position.x = aspect > 1.15 ? -1.9 : 0;
+    const halfWidth = Math.tan(THREE.MathUtils.degToRad(18)) * camera.position.z * aspect;
+    group.position.x = aspect > 1.15 ? -(halfWidth - 4.3) : 0;
     draw();
   };
   const observer = new ResizeObserver(resize);
