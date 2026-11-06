@@ -119,7 +119,7 @@ export function initPanels(caps) {
     scale: .965, transformOrigin: '50% 0', ease: 'none',
     scrollTrigger: { trigger: '.sheet', start: 'top bottom', end: 'top 45%', scrub: true },
   });
-  gsap.utils.toArray('.steps li, .quote-form, .footer-cta, .compare-row, .diag-panel, .faq-list').forEach((element) => {
+  gsap.utils.toArray('.steps li, .quote-form, .footer-cta, .compare-row, .diag-panel, .faq-list, .case-card').forEach((element) => {
     gsap.from(element, {
       y: 48, opacity: 0, duration: .9, ease: 'power3.out',
       scrollTrigger: { trigger: element, start: 'top 86%', once: true },
